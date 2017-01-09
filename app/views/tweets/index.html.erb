@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="text-center">Feed</h1>
+
+  <p><%= link_to "Add a new tweet!", new_tweet_path %></p>
+
+
+  <% @tweets.each do |tweet| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">@<%= tweet.handle %> | <%= time_ago_in_words(tweet.created_at) %> ago </h3>
+      </div>
+      <div class="panel-body">
+        <%= tweet.content %>
+        <br>
+        <div>
+          <%= link_to "More info", tweet_path(tweet) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

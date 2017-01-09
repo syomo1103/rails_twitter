@@ -1,0 +1,18 @@
+<h1>Edit tweet!</h1>
+
+<%= form_for @tweet do |f| %>
+
+<div>
+  <%= f.label :handle %>
+  <%= f.text_field :handle %>
+</div>
+
+<div>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+</div>
+
+<%= f.submit "Submit changes" %>
+<%= link_to "Cancel", tweet_path %>
+
+<% end %>

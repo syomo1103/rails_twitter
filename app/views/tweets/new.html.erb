@@ -1,0 +1,29 @@
+<h1>Create a new tweet!</h1>
+
+<%= form_for @tweet do |f| %>
+
+<div>
+  <%= f.label :handle %>
+  <%= f.text_field :handle %>
+</div>
+
+<div>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+</div>
+
+<%= f.submit "Save your tweet" %>
+
+<%= link_to "Back to the list", tweets_path %>
+
+<!-- = button_tag "Cancel", :type => 'button'
+ -->
+
+<% end %>
+
+
+
+<!-- add clear fields option -->
+
+
+
